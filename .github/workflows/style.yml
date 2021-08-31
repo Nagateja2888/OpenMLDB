@@ -49,3 +49,14 @@ jobs:
           filter_mode: diff_context
           fail_on_error: true
           exclude: "./.git/*" # Optional.
+#adding pylint 
+
+
+	rev: pylint-2.4.4 
+	hooks:
+	- id: pylint
+	args: 
+	- --max-line-length=80
+	- -d duplicate-code
+	- --ignore-imports=yes
+	
